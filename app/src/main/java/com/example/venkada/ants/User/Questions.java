@@ -1,11 +1,11 @@
-package user;
+package com.example.venkada.ants.User;
 
-public class Question {
+public class Questions {
 	
 	private String question;
 	
 
-	public Question(String question) {
+	public Questions(String question) {
 		super();
 		this.question = question;
 	}

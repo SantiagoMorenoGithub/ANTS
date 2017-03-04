@@ -1,4 +1,4 @@
-package user;
+package com.example.venkada.ants.User;
 
 public class Admin extends User {
 
