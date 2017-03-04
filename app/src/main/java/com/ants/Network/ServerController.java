@@ -3,10 +3,13 @@ package com.ants.Network;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
+import android.util.Base64;
 import android.widget.Toast;
 
 import com.ants.Globals;
 import com.ants.MainActivity;
+import com.example.venkada.ants.BuildConfig;
+import com.example.venkada.ants.R;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -53,14 +56,16 @@ public class ServerController {
             myRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    Globals.name = "";
+                    Globals.firstName = "";
+                    Globals.lastName = "";
                     Globals.username = "";
                     Globals.password = "";
                     Globals.loggedIn = false;
 
                     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
                     SharedPreferences.Editor editor = prefs.edit();
-                    editor.putString("name", Globals.name);
+                    editor.putString("name", Globals.firstName);
+                    editor.putString("name", Globals.lastName);
                     editor.putString("username", Globals.username);
                     editor.putString("password", Globals.password);
                     editor.apply();
@@ -92,7 +97,7 @@ public class ServerController {
 
     private enum RequestTypes {GET, POST, DELETE, PUT}
 
-    private static void MakeRequest(final Context context, HashMap<String, String> params, String url, finalResponseAction action, RequestTypes requestType, boolean isJson, boolean isUrlParams) {
+    private static void MakeRequest(final Context context, HashMap<String, String> params, String url, final ResponseAction action, RequestTypes requestType, boolean isJson, boolean isUrlParams) {
         HttpUrl.Builder urlBuilder = new HttpUrl.Builder()
                 .scheme("https")
                 .host(APIURL)
