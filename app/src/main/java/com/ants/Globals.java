@@ -11,4 +11,5 @@ public class Globals {
     public static String firstName = "";
     public static String lastName = "";
     public static boolean loggedIn = false;
+
 }

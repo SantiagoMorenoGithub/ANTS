@@ -3,7 +3,7 @@ package com.ants;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.venkada.ants.R;
+import com.ants.R;
 
 public class MainActivity extends AppCompatActivity {
 

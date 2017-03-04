@@ -3,7 +3,7 @@ package com.ants.Network;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.venkada.ants.R;
+import com.ants.R;
 
 public abstract class ResponseAction {
 

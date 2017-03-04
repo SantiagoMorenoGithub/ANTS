@@ -2,14 +2,16 @@ package com.ants.Network;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.util.Base64;
 import android.widget.Toast;
 
 import com.ants.Globals;
 import com.ants.MainActivity;
-import com.example.venkada.ants.BuildConfig;
-import com.example.venkada.ants.R;
+import com.ants.BuildConfig;
+import com.ants.R;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -146,7 +148,7 @@ public class ServerController {
         final Handler mainHandler = new Handler(context.getMainLooper());
 
         // Make the request
-        MyOkHttpClient.client().newCall(request.build()).enqueue(new Callback() {
+         MyOkHttpClient.client().newCall(request.build()).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 // Error connecting to the server
