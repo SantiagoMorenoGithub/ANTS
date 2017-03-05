@@ -7,7 +7,7 @@ public class Patient extends User{
 	private Date date_of_dignosis;
 	
 	public Patient(String username, String password, String first_name, String last_name, Date date_of_birth,Date date_of_dignosis ) {
-		super(username, password, first_name, last_name, date_of_birth);
+		super(username, password, first_name, last_name, date_of_birth, null, null);
 		this.setDate_of_dignosis(date_of_dignosis);
 	}
 	public Date getDate_of_dignosis() {
