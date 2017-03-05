@@ -2,7 +2,7 @@ package com.ants.User;
 
 import java.util.Date;
 
-public class Caregiver extends User{
+public class CareGiver extends User{
 	
 	private String employee_id;
 	private int flag;
