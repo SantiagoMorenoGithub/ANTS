@@ -210,5 +210,4 @@ public class ServerController {
 
         MakeRequest(context, params, "Login", action, RequestTypes.GET, false, true);
     }
-
 }
