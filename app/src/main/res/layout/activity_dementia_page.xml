@@ -15,8 +15,7 @@
         android:layout_weight="1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/question_pop_up"
-        android:textColorHint="#ffffff"/>
+        android:hint="@string/question_pop_up" />
 
     <Button android:id="@+id/check_box"
         android:layout_width="80dp"

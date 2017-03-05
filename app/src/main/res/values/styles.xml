@@ -6,7 +6,6 @@
         <item name="colorPrimary">#26ae90</item>
         <item name="colorPrimaryDark">#26ae90</item>
         <item name="colorAccent">#26ae90</item>
-        <item name="android:windowBackground">#26ae90</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
