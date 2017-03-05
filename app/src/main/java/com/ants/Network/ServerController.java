@@ -34,7 +34,7 @@ import okhttp3.Response;
 
 public class ServerController {
 
-    private static final String APIURL = "api.ants.com";
+    private static final String APIURL = "antwebserver.azurewebsites.net";
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private static final String JSONDATA = "JsonData";
 
@@ -204,14 +204,11 @@ public class ServerController {
 
     /*------------------------------ User Requests ------------------------------*/
     public static void loginUser(Context context, ResponseAction action, String username, String password) {
-        GetUserParam param = new GetUserParam();
-        param.Username = username;
-        param.Password = password;
-        Gson gson = new Gson();
-
         HashMap<String, String> params = new HashMap<>();
-        params.put(JSONDATA, gson.toJson(param));
-        MakeRequest(context, params, "Users", action, RequestTypes.POST, true, false);
+        params.put("username", username);
+        params.put("password", password);
+
+        MakeRequest(context, params, "Login", action, RequestTypes.GET, false, true);
     }
 
 }
