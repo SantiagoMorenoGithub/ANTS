@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.Date;
+
 public class SignUpPage extends AppCompatActivity {
 
     @Override
@@ -31,6 +33,7 @@ public class SignUpPage extends AppCompatActivity {
                 String firstName = firstNameText.getText().toString();
                 String lastName = lastNameText.getText().toString();
                 String dateOfBirth = dateOfBirthText.getText().toString();
+                Date dob = new Date(dateOfBirth);
                 String location = locationText.getText().toString();
                 //register();
             }
