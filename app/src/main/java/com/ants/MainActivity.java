@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void Success(final String data, Context context) {
                 //TODO
-                String userType = "Patient";
+                String userType = ;
                 if (userType.equals("Patient")) {
                     Intent intentDementia = new Intent(getBaseContext(), DementiaPage.class);
                 }
