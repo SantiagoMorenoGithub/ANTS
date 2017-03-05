@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 Globals.password = password;
 
                 if (user.user_type.equals("patient")) {
-                    Intent intentDementia = new Intent(getBaseContext(), DementiaPage.class);
+                    Intent intentDementia = new Intent(getBaseContext(), PatientActivity.class);
                     startActivity(intentDementia);
                 }
                 else{
