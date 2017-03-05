@@ -16,11 +16,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignUpPage"
+            android:name="com.ants.SignUpPage"
             android:label="@string/title_activity_sign_up_page"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".User.DementiaPage" />
-        <activity android:name=".Answered"></activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

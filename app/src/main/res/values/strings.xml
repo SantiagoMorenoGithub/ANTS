@@ -11,12 +11,7 @@
     <string name="enter_location">"Location (Optional)"</string>
     <string name="enter_phone_num">"Phone_number (Optional)"</string>
 
-    <string name="updateApp">"Please update this app."</string>
-    <string name="networkError">"There was a network error. Please try again later."</string>
-
-    <string name="question_pop_up">"Please wait for question to pop up"</string>
-
-    <string name="check_box">check box</string>
-    <string name="wrong_box">wrong box</string>
+    <string name="updateApp">"Please update this app.</string>
+    <string name="networkError">"There was a network error. Please try again later.</string>
 
 </resources>
