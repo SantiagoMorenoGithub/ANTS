@@ -72,11 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 else{
                         //Intent intentDementia = new Intent(getBaseContext(), CareGiver.class);
                     }
-
-
                 }
-            }
-            ;
+            };
             ServerController.loginUser(this,loginAction,username,password);
     }
 }
