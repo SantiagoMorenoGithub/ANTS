@@ -3,6 +3,7 @@ package com.ants;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.ants.Network.ResponseAction;
 import com.ants.Network.ServerController;
@@ -27,7 +28,5 @@ public class MainActivity extends AppCompatActivity {
         };
         ServerController.loginUser(this, loginAction, username, password);
     }
-    public void login(View view){
 
-    }
 }

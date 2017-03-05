@@ -90,7 +90,7 @@ public class ServerController {
             myRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    Toast.makeText(context, context.getString(R.string.updateFlipd), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.updateApp), Toast.LENGTH_SHORT).show();
                 }
             };
             mainHandler.post(myRunnable);

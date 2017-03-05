@@ -9,8 +9,8 @@ public class CareGiver extends User{
 	private Schedule[] schedule_list;
 	private Answer[] answers_list;
 	
-	public CareGiver(String username, String password, String first_name, String last_name, Date date_of_birth,String employee_id) {
-		super(username, password, first_name, last_name, date_of_birth);
+	public CareGiver(String username, String password, String first_name, String last_name, Date date_of_birth,String employee_id, String phoneNum, String address) {
+		super(username, password, first_name, last_name, date_of_birth, phoneNum, address);
 		
 		this.setEmployee_id(employee_id);
 	}
