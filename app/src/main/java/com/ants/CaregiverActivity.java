@@ -3,11 +3,11 @@ package com.ants;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Answered extends AppCompatActivity {
+public class CaregiverActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_answered);
+        setContentView(R.layout.activity_caregiver);
     }
 }
