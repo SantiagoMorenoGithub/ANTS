@@ -30,7 +30,7 @@
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint" />
 
-        u<EditText
+        <EditText
             android:id="@+id/password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

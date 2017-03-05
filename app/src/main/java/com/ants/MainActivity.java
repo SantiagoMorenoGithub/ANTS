@@ -10,7 +10,13 @@ import android.widget.EditText;
 
 import com.ants.Network.ResponseAction;
 import com.ants.Network.ServerController;
+import com.ants.Network.ServerModels;
 import com.ants.User.Patient;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         Button registerButton = (Button) findViewById(R.id.btnLinkToRegisterScreen);
+        Button loginButton = (Button) findViewById(R.id.btnLogin);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,9 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        Button loginButton = (Button) findViewById(R.id.btnLogin);
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText getUsername = (EditText)findViewById(R.id.email);
@@ -42,15 +48,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void login(String username, String password) {
+    private void login(final String username, final String password) {
 
         ResponseAction loginAction = new ResponseAction() {
             @Override
             public void Success(final String data, Context context) {
                 //TODO
-                String userType = ;
-                if (userType.equals("Patient")) {
-                    Intent intentDementia = new Intent(getBaseContext(), DementiaPage.class);
+                Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create();
+                Type userType = new TypeToken<ServerModels.GetUserResult>() {}.getType();
+                ServerModels.GetUserResult user = gson.fromJson(data, userType);
+
+                Globals.firstName = user.first_name;
+                Globals.lastName = user.last_name;
+                Globals.userType = user.user_type;
+                Globals.loggedIn = true;
+                Globals.username = username;
+                Globals.password = password;
+
+                if (user.user_type.equals("patient")) {
+                    Intent intentDementia = new Intent(getBaseContext(), PatientActivity.class);
+                    startActivity(intentDementia);
                 }
                 else{
                         //Intent intentDementia = new Intent(getBaseContext(), CareGiver.class);

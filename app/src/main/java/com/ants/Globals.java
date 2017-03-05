@@ -10,5 +10,6 @@ public class Globals {
     public static String password = "";
     public static String firstName = "";
     public static String lastName = "";
+    public static String userType = "";
     public static boolean loggedIn = false;
 }

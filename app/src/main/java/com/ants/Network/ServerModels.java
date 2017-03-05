@@ -5,9 +5,9 @@ import java.util.Date;
 public class ServerModels {
 
     public class GetUserResult {
-        public String firstName;
-        public String lastName;
-        public String userType;
+        public String first_name;
+        public String last_name;
+        public String user_type;
     }
 
     public class Patient {
