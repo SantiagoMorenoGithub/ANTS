@@ -24,11 +24,9 @@
             android:name=".SignUpPage"
             android:label="@string/title_activity_sign_up_page"
             android:theme="@style/AppTheme.NoActionBar" />
-<<<<<<< Updated upstream
         <activity android:name=".User.DementiaPage" />
         <activity android:name=".Answered"></activity>
-=======
->>>>>>> Stashed changes
+
     </application>
 
 </manifest>
