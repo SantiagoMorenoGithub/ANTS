@@ -7,7 +7,6 @@ public class Schedule {
 	private int hour;
 	private int min;
 	private Map<String, Boolean> day;
-	
 
 	/**
 	 * @param question
@@ -54,7 +53,4 @@ public class Schedule {
 	public void setDay(Map<String, Boolean> day) {
 		this.day = day;
 	}
-	
-	
-
 }

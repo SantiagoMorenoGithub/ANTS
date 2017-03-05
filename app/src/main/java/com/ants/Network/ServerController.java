@@ -210,8 +210,8 @@ public class ServerController {
         Gson gson = new Gson();
 
         HashMap<String, String> params = new HashMap<>();
-        params.post(JSONDATA, gson.toJson(param));
-        MakeRequest(context, params, "Users", action, RequestTypes.PUT, true, false);
+        params.put(JSONDATA, gson.toJson(param));
+        MakeRequest(context, params, "Users", action, RequestTypes.POST, true, false);
     }
 
 }
