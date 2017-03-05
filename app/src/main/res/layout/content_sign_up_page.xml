@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/bg_login"
@@ -68,20 +69,17 @@
                 android:textColor="@color/input_login"
                 android:textColorHint="@color/input_login_hint" />
 
-            <EditText
-                android:id="@+id/enter_dob"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@color/white"
-                android:hint="@string/enter_dob"
-                android:padding="10dp"
-                android:singleLine="true"
-                android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint"
-                android:inputType="date" />
+        <DatePicker
+            android:id="@+id/enter_dob"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:hint="Date of Birth"
+            android:padding="10dp"
+            android:textColor="@color/input_login"
+            android:textColorHints="@color/input_login_hint" />
 
-            <EditText
+        <EditText
                 android:id="@+id/enter_loc"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -121,4 +119,5 @@
 
 
     </LinearLayout>
+
 </LinearLayout>
