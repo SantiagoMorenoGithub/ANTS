@@ -211,4 +211,23 @@ public class ServerController {
         MakeRequest(context, params, "Login", action, RequestTypes.GET, false, true);
     }
 
+    public static void createPatient(Context context, ResponseAction action, String username, String password) {
+        HashMap<String, String> params = new HashMap<>();
+        params.put("username", username);
+        params.put("password", password);
+
+        MakeRequest(context, params, "Login", action, RequestTypes.GET, false, true);
+    }
+
+    public static void createCaregiver(Context context, ResponseAction action, String username, String password) {
+        HashMap<String, String> params = new HashMap<>();
+        params.put("username", username);
+        params.put("password", password);
+
+        MakeRequest(context, params, "Login", action, RequestTypes.GET, false, true);
+    }
+
+    public static void linkUsers(Context context, ResponseAction action, String username, String password) {
+
+    }
 }
