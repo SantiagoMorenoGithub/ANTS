@@ -4,5 +4,11 @@
     <string name="enter_password">Password</string>
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
+    <string name="title_activity_sign_up_page">SignUpPage</string>
+    <string name="enter_first_name">First Name</string>
+    <string name="enter_last_name">Last Name</string>
+    <string name="enter_dob">Date Of Birth</string>
+    <string name="enter_location">"Location (Optional)"</string>
+    <string name="enter_phone_num">"Phone_number (Optional)"</string>
 
 </resources>
