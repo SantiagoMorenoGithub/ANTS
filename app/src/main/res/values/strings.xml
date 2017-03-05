@@ -41,5 +41,8 @@
     <string name="hint_password">Password</string>
     <string name="btn_login">LOGIN</string>
     <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="title_activity_caregiver">CaregiverActivity</string>
+    <string name="title_activity_answered">AnsweredActivity</string>
+    <string name="title_activity_questions">QuestionsActivity</string>
 
 </resources>

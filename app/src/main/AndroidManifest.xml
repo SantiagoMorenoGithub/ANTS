@@ -25,9 +25,15 @@
             android:name=".SignUpPage"
             android:label="@string/title_activity_sign_up_page"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DementiaPage" />
-        <activity android:name=".Answered"></activity>
-
+        <activity android:name=".PatientActivity" />
+        <activity android:name=".CaregiverActivity" />
+        <activity android:name=".AnswersActivity" />
+        <activity
+            android:name=".QuestionsActivity"
+            android:label="@string/title_activity_questions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EditQuestionActivity" />
+        <activity android:name=".CreateQuestionsActivity"></activity>
     </application>
 
 </manifest>
