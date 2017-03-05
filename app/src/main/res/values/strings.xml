@@ -11,4 +11,7 @@
     <string name="enter_location">"Location (Optional)"</string>
     <string name="enter_phone_num">"Phone_number (Optional)"</string>
 
+    <string name="updateApp">"Please update this app.</string>
+    <string name="networkError">"There was a network error. Please try again later.</string>
+
 </resources>

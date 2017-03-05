@@ -2,11 +2,18 @@ package com.ants.Network;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.util.Base64;
 import android.widget.Toast;
 
 import com.ants.Globals;
 import com.ants.MainActivity;
+import com.ants.Network.ServerModels;
+import com.ants.BuildConfig;
+import com.ants.R;
+import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -27,7 +34,7 @@ import okhttp3.Response;
 
 public class ServerController {
 
-    private static final String APIURL = "api.flipdapp.co";
+    private static final String APIURL = "api.ants.com";
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private static final String JSONDATA = "JsonData";
 
@@ -53,14 +60,16 @@ public class ServerController {
             myRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    Globals.name = "";
+                    Globals.firstName = "";
+                    Globals.lastName = "";
                     Globals.username = "";
                     Globals.password = "";
                     Globals.loggedIn = false;
 
                     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
                     SharedPreferences.Editor editor = prefs.edit();
-                    editor.putString("name", Globals.name);
+                    editor.putString("name", Globals.firstName);
+                    editor.putString("name", Globals.lastName);
                     editor.putString("username", Globals.username);
                     editor.putString("password", Globals.password);
                     editor.apply();
@@ -92,7 +101,7 @@ public class ServerController {
 
     private enum RequestTypes {GET, POST, DELETE, PUT}
 
-    private static void MakeRequest(final Context context, HashMap<String, String> params, String url, finalResponseAction action, RequestTypes requestType, boolean isJson, boolean isUrlParams) {
+    private static void MakeRequest(final Context context, HashMap<String, String> params, String url, final ResponseAction action, RequestTypes requestType, boolean isJson, boolean isUrlParams) {
         HttpUrl.Builder urlBuilder = new HttpUrl.Builder()
                 .scheme("https")
                 .host(APIURL)
@@ -141,7 +150,7 @@ public class ServerController {
         final Handler mainHandler = new Handler(context.getMainLooper());
 
         // Make the request
-        MyOkHttpClient.client().newCall(request.build()).enqueue(new Callback() {
+         MyOkHttpClient.client().newCall(request.build()).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 // Error connecting to the server
@@ -191,6 +200,18 @@ public class ServerController {
                 mainHandler.post(myRunnable);
             }
         });
+    }
+
+    /*------------------------------ User Requests ------------------------------*/
+    public static void loginUser(Context context, ResponseAction action, String username, String password) {
+        GetUserParam param = new GetUserParam();
+        param.Username = username;
+        param.Password = password;
+        Gson gson = new Gson();
+
+        HashMap<String, String> params = new HashMap<>();
+        params.put(JSONDATA, gson.toJson(param));
+        MakeRequest(context, params, "Users", action, RequestTypes.POST, true, false);
     }
 
 }
