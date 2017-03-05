@@ -17,9 +17,6 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp" >
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/enter_email_address"
@@ -81,7 +78,8 @@
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:inputType="date" />
 
             <EditText
                 android:id="@+id/enter_loc"
@@ -105,9 +103,9 @@
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint" />
+                android:textColorHint="@color/input_login_hint"
+                android:inputType="phone" />
 
-        </ScrollView>
 
 
         <!-- Login Button -->
