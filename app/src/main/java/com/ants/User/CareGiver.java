@@ -1,7 +1,4 @@
-/**
- * 
- */
-package user;
+package com.ants.User;
 
 import java.util.Date;
 

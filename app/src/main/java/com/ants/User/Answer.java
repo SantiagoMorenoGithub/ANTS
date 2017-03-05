@@ -1,4 +1,4 @@
-package user;
+package com.ants.User;
 
 import java.sql.Date;
 

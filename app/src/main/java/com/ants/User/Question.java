@@ -1,6 +1,6 @@
-package user;
+package com.ants.User;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Question {
 	

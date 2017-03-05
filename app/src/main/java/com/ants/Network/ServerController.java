@@ -10,8 +10,10 @@ import android.widget.Toast;
 
 import com.ants.Globals;
 import com.ants.MainActivity;
+import com.ants.Network.ServerModels;
 import com.ants.BuildConfig;
 import com.ants.R;
+import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -32,7 +34,7 @@ import okhttp3.Response;
 
 public class ServerController {
 
-    private static final String APIURL = "api.flipdapp.co";
+    private static final String APIURL = "api.ants.com";
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private static final String JSONDATA = "JsonData";
 
@@ -198,6 +200,18 @@ public class ServerController {
                 mainHandler.post(myRunnable);
             }
         });
+    }
+
+    /*------------------------------ User Requests ------------------------------*/
+    public static void loginUser(Context context, ResponseAction action, String username, String password) {
+        GetUserParam param = new GetUserParam();
+        param.Username = username;
+        param.Password = password;
+        Gson gson = new Gson();
+
+        HashMap<String, String> params = new HashMap<>();
+        params.post(JSONDATA, gson.toJson(param));
+        MakeRequest(context, params, "Users", action, RequestTypes.PUT, true, false);
     }
 
 }

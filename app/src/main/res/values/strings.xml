@@ -5,7 +5,7 @@
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
 
-    <string name="updateFlipd">"Please update this app.</string>
-    <string name="networkError">"There is a network error. Please try again later.</string>
+    <string name="updateApp">"Please update this app.</string>
+    <string name="networkError">"There was a network error. Please try again later.</string>
 
 </resources>
