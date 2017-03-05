@@ -1,4 +1,4 @@
-package com.example.venkada.ants.User;
+package com.ants.User;
 
 public class CareGiver extends User {
 

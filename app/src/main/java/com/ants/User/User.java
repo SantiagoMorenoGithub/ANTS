@@ -1,4 +1,4 @@
-package com.example.venkada.ants.User;
+package com.ants.User;
 
 public abstract class User {
 	private String userName;
