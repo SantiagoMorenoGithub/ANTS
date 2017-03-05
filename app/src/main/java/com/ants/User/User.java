@@ -9,17 +9,38 @@ public class User {
 	private String first_name;
 	private String last_name;
 	private Date date_of_birth;
+	private String phone, address;
 	
-	public User(String username, String password, String first_name, String last_name,  Date date_of_birth) {
+	public User(String username, String password, String first_name, String last_name,  Date date_of_birth, String phone, String address) {
 
 		this.username = username;
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.password = password;
 		this.date_of_birth = date_of_birth;
+		this.phone = phone;
+		this.address = address;
 		
 	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	/**
+
 	 * @return the username
 	 */
 	public String getUsername() {
