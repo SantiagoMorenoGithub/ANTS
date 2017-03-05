@@ -26,8 +26,9 @@
     <Button android:id="@+id/wrong_box"
         android:layout_width="80dp"
         android:layout_height="0dp"
+        android:
         android:background="@drawable/wrong_mark"
         android:layout_weight="1" />
-        />
+    />
 
 </LinearLayout>

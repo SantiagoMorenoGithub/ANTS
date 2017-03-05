@@ -27,7 +27,4 @@ public class MainActivity extends AppCompatActivity {
         };
         ServerController.loginUser(this, loginAction, username, password);
     }
-    public void login(View view){
-
-    }
 }
